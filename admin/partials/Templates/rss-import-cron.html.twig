@@ -1,0 +1,52 @@
+<div class="bg-light card-body shadow-sm my-4 border rounded">
+    <h5>{{ 'Synchronization settings'|__ }}</h5>
+    <hr>
+    <form class="rss-feed-cron-form">
+        <input type="hidden" name="method" value="update_cron_settings">
+        <div class="form-check form-switch">
+            <input class="form-check-input no-blur" name="active"
+                   type="checkbox" role="switch" id="checkAktiv" {% if s.aktiv %}checked{% endif %}>
+            <label class="form-check-label" for="checkAktiv">{{ 'Cronjob active'|__ }}</label>
+        </div>
+        {% if s.aktiv %}
+            <div class="form-text">
+                <span class="d-block">{{ 'next synchronization on'|__ }} {{ dateTime|date('d.m.Y') }} {{ 'at'|__ }} {{ dateTime|date('H:i:s') }} {{ 'Clock'|__ }}</span>
+                <i class="bi bi-clock-history text-success me-1"></i><span id="nextSyncTime"></span>
+            </div>
+        {% endif %}
+        <hr>
+        <div class="col-12">
+            <div class="row g-3">
+                <div class="col-md-6 col-12">
+                    <div class="form-floating">
+                        <select class="form-select no-blur mw-100" name="selected_cron_sync_interval" id="selectInterval"
+                                aria-label="select Synchronisierungsintervall">
+                            {% for iv in select.select_api_sync_interval %}
+                                <option value="{{ iv.id }}"
+                                        {% if s.selected_cron_sync_interval == iv.id %}selected{% endif %}>{{ iv.bezeichnung }}</option>
+                            {% endfor %}
+                        </select>
+                        <label for="selectInterval">{{ 'Synchronization interval'|__ }}</label>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="form-floating">
+                        <select class="form-select no-blur mw-100" name="selected_cron_sync_interval" id="selectInterval"
+                                aria-label="select mindestanforderung">
+                            {% for ur in select.select_user_role %}
+                                <option value="{{ ur.value }}"
+                                        {% if s.selected_user_role == ur.value %}selected{% endif %}>{{ ur.name }}</option>
+                            {% endfor %}
+                        </select>
+                        <label for="selectInterval">{{ 'Minimum requirement for plugin usage'|__ }}</label>
+                    </div>
+                </div>
+
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-blue my-3"><i class="bi bi-save2 me-1"></i>{{ 'Save'|__ }}</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

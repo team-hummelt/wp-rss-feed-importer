@@ -1,0 +1,527 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-02-10 13:15+0100\n"
+"PO-Revision-Date: 2023-02-10 13:15+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;esc_html;esc_html__;esc_att;esc_attr__;"
+"esc_attr_e\n"
+"X-Poedit-SearchPath-0: admin\n"
+"X-Poedit-SearchPath-1: includes\n"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:263
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:380
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:387
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:408
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:416
+msgid "Ajax transmission error"
+msgstr "Ajax Übertragungsfehler"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:267
+msgid "Invalid designation"
+msgstr "Ungültige Bezeichnung"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:394
+msgid "Import failed"
+msgstr "Import fehlgeschlagen"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:398
+#: includes/Rss/CronSettings.php:187
+msgid "Imported"
+msgstr "Importiert"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:399
+msgid "Contributions were created successfully."
+msgstr "Beiträge wurden erfolgreich erstellt."
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:405
+msgid "Error"
+msgstr "Fehler"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:446
+msgid "Executed"
+msgstr "Ausgeführt"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:447
+msgid "The RSS import was successfully deleted."
+msgstr "Der RSS Import wurde erfolgreich gelöscht."
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:508
+msgid "Yes"
+msgstr "Ja"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:510
+msgid "No"
+msgstr "Nein"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:513
+msgid "Successful"
+msgstr "erfolgreich"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:515
+msgid "Failed"
+msgstr "fehlgeschlagen"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:517
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:526
+#: includes/Rss/CronSettings.php:237
+msgid "Clock"
+msgstr "Uhr"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:517
+msgid "unknown"
+msgstr "unbekannt"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:520
+msgid "Post"
+msgstr "Beitrag"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:520
+msgid "Posts"
+msgstr "Beiträge"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:529
+msgid "Import now"
+msgstr "jetzt Importieren"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:530
+#: includes/Rss/CronSettings.php:193
+#: includes/class-wp-rss-feed-importer-activator.php:142
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:531
+#: includes/Rss/CronSettings.php:194
+msgid "Delete"
+msgstr "Löschen"
+
+#: admin/class-wp-rss-feed-importer-admin.php:97
+#: admin/class-wp-rss-feed-importer-admin.php:98
+msgid "RSS-Feed"
+msgstr "RSS-Feed"
+
+#: admin/class-wp-rss-feed-importer-admin.php:108
+#: admin/class-wp-rss-feed-importer-admin.php:109
+msgid "RSS-Feed Settings"
+msgstr "RSS-Feed Einstellungen"
+
+#: admin/srv-api/class_srv_api_endpoint.php:178
+msgid "Method not found."
+msgstr "Methode nicht gefunden."
+
+#: admin/srv-api/config/class_make_remote_exec.php:202
+#: includes/Rss/CronSettings.php:195
+msgid "RSS Feed Importer"
+msgstr "RSS Feed Importer"
+
+#: admin/srv-api/config/class_make_remote_exec.php:202
+msgid "Plugin has been disabled."
+msgstr "Das Plugin wurde deaktiviert."
+
+#: admin/srv-api/config/class_make_remote_exec.php:202
+msgid "Contact the support."
+msgstr "Kontaktieren Sie den Support."
+
+#: includes/Rss/CronSettings.php:49
+msgid "Hourly"
+msgstr "Stündlich"
+
+#: includes/Rss/CronSettings.php:53
+msgid "Twice a day"
+msgstr "Zweimal Täglich"
+
+#: includes/Rss/CronSettings.php:57
+msgid "Once a day"
+msgstr "Einmal täglich"
+
+#: includes/Rss/CronSettings.php:61
+msgid "Once a week"
+msgstr "Einmal wöchentlich"
+
+#: includes/Rss/CronSettings.php:67
+msgid "Subscriber"
+msgstr "Abonnent"
+
+#: includes/Rss/CronSettings.php:71
+msgid "Contributor"
+msgstr "Mitarbeiter"
+
+#: includes/Rss/CronSettings.php:75
+msgid "Author"
+msgstr "Autor"
+
+#: includes/Rss/CronSettings.php:79
+msgid "Editor"
+msgstr "Redakteur"
+
+#: includes/Rss/CronSettings.php:83
+msgid "Administrator"
+msgstr "Administrator"
+
+#: includes/Rss/CronSettings.php:104
+msgid "RSS Title"
+msgstr "RSS Titel"
+
+#: includes/Rss/CronSettings.php:109
+msgid "RSS Channel Title"
+msgstr "RSS Channel Titel"
+
+#: includes/Rss/CronSettings.php:114 includes/Rss/CronSettings.php:121
+msgid "RSS Date"
+msgstr "RSS Datum"
+
+#: includes/Rss/CronSettings.php:126
+msgid "Post Date"
+msgstr "Post Datum"
+
+#: includes/Rss/CronSettings.php:133
+msgid "RSS Content"
+msgstr "RSS Content"
+
+#: includes/Rss/CronSettings.php:138
+msgid "RSS Description"
+msgstr "RSS Description"
+
+#: includes/Rss/CronSettings.php:143
+msgid "RSS Link"
+msgstr "RSS Link"
+
+#: includes/Rss/CronSettings.php:184
+msgid "Import title"
+msgstr "Import Title"
+
+#: includes/Rss/CronSettings.php:185
+msgid "Post Type"
+msgstr "Post Type"
+
+#: includes/Rss/CronSettings.php:186
+msgid "Category"
+msgstr "Kategorie"
+
+#: includes/Rss/CronSettings.php:188
+msgid "Last"
+msgstr "Last"
+
+#: includes/Rss/CronSettings.php:189
+msgid "Next"
+msgstr "Next"
+
+#: includes/Rss/CronSettings.php:190
+msgid "Import Status"
+msgstr "Import Status"
+
+#: includes/Rss/CronSettings.php:191
+msgid "Active"
+msgstr "Aktiv"
+
+#: includes/Rss/CronSettings.php:192
+msgid "Import"
+msgstr "Importieren"
+
+#: includes/Rss/CronSettings.php:196
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: includes/Rss/CronSettings.php:197
+msgid "RSS Feed Import"
+msgstr "RSS Feed Importer"
+
+#: includes/Rss/CronSettings.php:198
+msgid "Overview"
+msgstr "Übersicht"
+
+#: includes/Rss/CronSettings.php:199
+msgid "Add import"
+msgstr "Import hinzufügen"
+
+#: includes/Rss/CronSettings.php:200
+msgid "Manage imports"
+msgstr "Importe Verwalten"
+
+#: includes/Rss/CronSettings.php:201
+msgid "back"
+msgstr "zurück"
+
+#: includes/Rss/CronSettings.php:202
+msgid "Channel"
+msgstr "Channel"
+
+#: includes/Rss/CronSettings.php:203
+msgid "Channel Title"
+msgstr "Channel Titel"
+
+#: includes/Rss/CronSettings.php:204
+msgid "no data"
+msgstr "keine Angaben"
+
+#: includes/Rss/CronSettings.php:205
+msgid "Channel Link"
+msgstr "Channel Link"
+
+#: includes/Rss/CronSettings.php:206
+msgid "Channel language"
+msgstr "Channel Sprache"
+
+#: includes/Rss/CronSettings.php:207
+msgid "Date of publication"
+msgstr "Datum der Veröffentlichung"
+
+#: includes/Rss/CronSettings.php:208
+msgid "last publication date"
+msgstr "letztes Erstellungsdatum"
+
+#: includes/Rss/CronSettings.php:209
+msgid "Copyright"
+msgstr "Copyright"
+
+#: includes/Rss/CronSettings.php:210
+msgid "import new RSS feed"
+msgstr "neuen RSS-Feed Importieren"
+
+#: includes/Rss/CronSettings.php:211
+msgid "Edit RSS feed"
+msgstr "RSS-Feed bearbeiten"
+
+#: includes/Rss/CronSettings.php:212
+msgid "Import name"
+msgstr "Bezeichnung für den Import"
+
+#: includes/Rss/CronSettings.php:213
+msgid "RSS Feed Url"
+msgstr "RSS Feed Url"
+
+#: includes/Rss/CronSettings.php:214
+msgid "from"
+msgstr "von"
+
+#: includes/Rss/CronSettings.php:215
+msgid "to"
+msgstr "bis"
+
+#: includes/Rss/CronSettings.php:216
+msgid "Filter by time period"
+msgstr "Nach Zeitspanne filtern"
+
+#: includes/Rss/CronSettings.php:217
+msgid "Post Taxonomy"
+msgstr "Post Taxonomy"
+
+#: includes/Rss/CronSettings.php:218
+msgid "Post Status"
+msgstr "Post Status"
+
+#: includes/Rss/CronSettings.php:219
+msgid "Post Title"
+msgstr "Post Titel"
+
+#: includes/Rss/CronSettings.php:220
+msgid "Post content"
+msgstr "Post content"
+
+#: includes/Rss/CronSettings.php:221
+msgid "Post date"
+msgstr "Post Datum"
+
+#: includes/Rss/CronSettings.php:222
+msgid "Import posts per update"
+msgstr "Beiträge pro Update Importieren"
+
+#: includes/Rss/CronSettings.php:223
+msgid "Delete automatically"
+msgstr "Automatisch löschen"
+
+#: includes/Rss/CronSettings.php:224
+msgid "Number of days"
+msgstr "Anzahl Tage"
+
+#: includes/Rss/CronSettings.php:225
+msgid ""
+"Useful if you want to remove obsolete articles automatically. If the entry "
+"remains empty, the imported articles will not be deleted automatically."
+msgstr ""
+"Hilfreich, wenn Sie veraltete Artikel automatisch entfernen möchten. Bleibt "
+"die Eingabe leer, werden  die importierten Artikel nicht automatisch "
+"gelöscht."
+
+#: includes/Rss/CronSettings.php:226
+msgid "Import active"
+msgstr "Import aktiv"
+
+#: includes/Rss/CronSettings.php:227
+msgid "Remove duplicate entries"
+msgstr "Doppelte Einträge entfernen"
+
+#: includes/Rss/CronSettings.php:228
+msgid "Delete items created for this import after a specified number of days."
+msgstr ""
+"Löschen Sie die für diesen Import erstellten Beiträge  nach einer bestimmten "
+"Anzahl von Tagen."
+
+#: includes/Rss/CronSettings.php:229
+msgid "Save"
+msgstr "Speichern"
+
+#: includes/Rss/CronSettings.php:230 includes/Rss/CronSettings.php:246
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: includes/Rss/CronSettings.php:231
+msgid "Synchronization settings"
+msgstr "Synchronisation-Einstellungen"
+
+#: includes/Rss/CronSettings.php:232
+msgid "Cronjob active"
+msgstr "Cronjob aktiv"
+
+#: includes/Rss/CronSettings.php:233
+msgid "next synchronization on"
+msgstr "nächste Synchronisierung am"
+
+#: includes/Rss/CronSettings.php:234
+msgid "at"
+msgstr "um"
+
+#: includes/Rss/CronSettings.php:235
+msgid "Synchronization interval"
+msgstr "Synchronisierungsintervall"
+
+#: includes/Rss/CronSettings.php:236
+msgid "Minimum requirement for plugin usage"
+msgstr "Mindestvoraussetzung für die Verwendung dieses Plugins"
+
+#: includes/Rss/CronSettings.php:245
+msgid "Delete all imported posts?"
+msgstr "Alle Importierten Beiträge löschen?"
+
+#: includes/Rss/CronSettings.php:247
+msgid "Really delete import?"
+msgstr "Import wirklich löschen?"
+
+#: includes/Rss/CronSettings.php:248
+msgid "The deletion cannot be undone."
+msgstr "Das Löschen kann nicht rückgängig gemacht."
+
+#: includes/Rss/CronSettings.php:249
+msgid "Delete import"
+msgstr "Import löschen"
+
+#: includes/class-wp-rss-feed-importer-activator.php:138
+#: includes/class-wp-rss-feed-importer-activator.php:139
+#: includes/class-wp-rss-feed-importer-activator.php:140
+msgid "News"
+msgstr "News"
+
+#: includes/class-wp-rss-feed-importer-activator.php:141
+msgid "Parent Item:"
+msgstr "Übergeordnete Kategorie:"
+
+#: includes/class-wp-rss-feed-importer-activator.php:143
+msgid "Actualize"
+msgstr "Aktualisieren"
+
+#: includes/class-wp-rss-feed-importer-activator.php:144
+msgid "All News"
+msgstr "Alle News"
+
+#: includes/class-wp-rss-feed-importer-activator.php:145
+msgid "News Posts navigation"
+msgstr "News Beiträge Navigation"
+
+#: includes/class-wp-rss-feed-importer-activator.php:146
+msgid "Add new post"
+msgstr "Neuen Beitrag hinzufügen"
+
+#: includes/class-wp-rss-feed-importer-activator.php:147
+msgid "News Posts Archives"
+msgstr "News Archiv"
+
+#: includes/class-wp-rss-feed-importer-activator.php:174
+msgid "News categories"
+msgstr "News-Kategorien"
+
+#: includes/class-wp-rss-feed-importer-activator.php:175
+#: includes/class-wp-rss-feed-importer-activator.php:184
+#: includes/class-wp-rss-feed-importer-activator.php:215
+msgid "News category"
+msgstr "News Kategorie"
+
+#: includes/class-wp-rss-feed-importer-activator.php:176
+msgid "Search News Category"
+msgstr "News Kategorie suchen"
+
+#: includes/class-wp-rss-feed-importer-activator.php:177
+msgid "All news categories"
+msgstr "Alle News-Kategorien"
+
+#: includes/class-wp-rss-feed-importer-activator.php:178
+msgid "Parent category"
+msgstr "Übergeordnete Kategorie"
+
+#: includes/class-wp-rss-feed-importer-activator.php:179
+msgid "Parent category:"
+msgstr "Übergeordnete Kategorie:"
+
+#: includes/class-wp-rss-feed-importer-activator.php:180
+msgid "Edit News Category"
+msgstr "News-Kategorie bearbeiten"
+
+#: includes/class-wp-rss-feed-importer-activator.php:181
+msgid "News category update"
+msgstr "News Kategorie aktualisieren"
+
+#: includes/class-wp-rss-feed-importer-activator.php:182
+msgid "Add new news category"
+msgstr "Neue News-Kategorie hinzufügen"
+
+#: includes/class-wp-rss-feed-importer-activator.php:183
+msgid "New News Category"
+msgstr "Neue News-Kategorie"
+
+#: includes/class-wp-rss-feed-importer-activator.php:204
+msgid "General"
+msgstr "Allgemein"
+
+#: includes/class-wp-rss-feed-importer-activator.php:205
+msgid "general"
+msgstr "allgemein"
+
+#: includes/class-wp-rss-feed-importer.php:360
+#, php-format
+msgid ""
+"This plugin has been disabled because it requires a PHP version greater than "
+"%s and a WordPress version greater than %s. Your PHP version can be updated "
+"by your hosting provider."
+msgstr ""
+"Dieses Plugin wurde deaktiviert, weil es eine PHP-Version größer als %s und "
+"eine WordPress-Version größer als %s benötigt. Ihre PHP-Version kann von "
+"Ihrem Hosting-Anbieter aktualisiert werden."
+
+#: includes/vendor/yahnis-elsts/plugin-update-checker/Puc/v4p13/Plugin/Ui.php:54
+msgid "View details"
+msgstr "Details anzeigen"
+
+#: includes/vendor/yahnis-elsts/plugin-update-checker/Puc/v4p13/Plugin/Ui.php:77
+#, php-format
+msgid "More information about %s"
+msgstr "Weitere Informationen über %s"
+
+#: includes/vendor/yahnis-elsts/plugin-update-checker/Puc/v4p13/Plugin/Ui.php:128
+msgid "Check for updates"
+msgstr "Nach Aktualisierungen suchen"
+
+#: includes/vendor/yahnis-elsts/plugin-update-checker/Puc/v4p13/Plugin/Ui.php:224
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr "Unbekannter Update-Checker-Status \"%s\""
+
+#: includes/vendor/yahnis-elsts/plugin-update-checker/Puc/v4p13/Vcs/PluginUpdateChecker.php:100
+msgid "There is no changelog available."
+msgstr "Es ist kein Change Log verfügbar."
