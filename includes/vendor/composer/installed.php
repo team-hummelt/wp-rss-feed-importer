@@ -5,7 +5,7 @@
         'type' => 'child-theme',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'bc9edddda534d58fe102adaa13ed4ae80cba64a5',
+        'reference' => '20b5b665cd6df12ef004c1bf364ff9faacf65330',
         'name' => 'wiecker/rss-feed-importer',
         'dev' => true,
     ),
@@ -61,7 +61,7 @@
             'type' => 'child-theme',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'bc9edddda534d58fe102adaa13ed4ae80cba64a5',
+            'reference' => '20b5b665cd6df12ef004c1bf364ff9faacf65330',
             'dev_requirement' => false,
         ),
         'yahnis-elsts/plugin-update-checker' => array(
