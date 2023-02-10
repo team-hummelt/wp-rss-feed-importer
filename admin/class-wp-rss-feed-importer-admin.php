@@ -116,7 +116,7 @@ class Wp_Rss_Feed_Importer_Admin {
 
 	public function wp_rss_imports_startseite(): void {
 		$settings = $this->get_cron_defaults();
-
+print_r(get_option('wp_rss_importer_settings'));
 		if (!get_option('wp_rss_importer_settings')) {
 			update_option('wp_rss_importer_settings', $settings['cron_settings']);
 		}
@@ -160,7 +160,48 @@ class Wp_Rss_Feed_Importer_Admin {
 		wp_send_json( $adminAjaxHandle->admin_ajax_handle() );
 	}
 
-	/**
+    /**
+     * Register the Update-Checker for the Plugin.
+     *
+     * @since    1.0.0
+     */
+    public function rss_importer_update_checker()
+    {
+
+        if (get_option("{$this->basename}_update_config") && get_option($this->basename . '_update_config')->update->update_aktiv) {
+            $securityHeaderUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+                get_option("{$this->basename}_update_config")->update->update_url_git,
+                WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . $this->basename . DIRECTORY_SEPARATOR . $this->basename . '.php',
+                $this->basename
+            );
+
+            switch (get_option("{$this->basename}_update_config")->update->update_type) {
+                case '1':
+                    $securityHeaderUpdateChecker->getVcsApi()->enableReleaseAssets();
+                    break;
+                case '2':
+                    $securityHeaderUpdateChecker->setBranch(get_option("{$this->basename}_update_config")->update->branch_name);
+                    break;
+            }
+        }
+    }
+
+    /**
+     * add plugin upgrade notification
+     */
+
+    public function rss_importer_show_upgrade_notification($current_plugin_metadata, $new_plugin_metadata)
+    {
+
+        if (isset($new_plugin_metadata->upgrade_notice) && strlen(trim($new_plugin_metadata->upgrade_notice)) > 0) {
+            // Display "upgrade_notice".
+            echo sprintf('<span style="background-color:#d54e21;padding:10px;color:#f9f9f9;margin-top:10px;display:block;"><strong>%1$s: </strong>%2$s</span>', esc_attr('Important Upgrade Notice', 'wp-security-header'), esc_html(rtrim($new_plugin_metadata->upgrade_notice)));
+
+        }
+    }
+
+
+    /**
 	 * Register the JavaScript for the admin area.
 	 *
 	 * @since    1.0.0

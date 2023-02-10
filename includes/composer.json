@@ -5,7 +5,7 @@
   "description": "",
   "homepage": "https://wwdh.de/",
   "require": {
-    "php": "~8.0",
+    "php": "~8.1",
     "twig/twig": "^v3.5.1",
     "yahnis-elsts/plugin-update-checker": "^v4.13",
     "components/font-awesome": "4.7.0",

@@ -412,6 +412,10 @@ class Wp_Rss_Feed_Importer {
 		$registerEndpoint = new RSS_Importer_Rest_Endpoint($this->main);
 		$this->loader->add_action('rest_api_init', $registerEndpoint, 'register_rss_importer_routes');
 
+        //JOB UPDATE CHECKER
+        $this->loader->add_action('init', $plugin_admin, 'rss_importer_update_checker');
+        $this->loader->add_action('in_plugin_update_message-' . WP_RSS_FEED_IMPORTER_SLUG_PATH . '/' . WP_RSS_FEED_IMPORTER_SLUG_PATH . '.php', $plugin_admin, 'rss_importer_show_upgrade_notification', 10, 2);
+
 	}
 
 	/**
