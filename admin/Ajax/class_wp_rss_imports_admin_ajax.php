@@ -213,9 +213,11 @@ class WP_RSS_Imports_Admin_Ajax
         filter_input(INPUT_POST, 'active', FILTER_UNSAFE_RAW) ? $active = 1 : $active = 0;
         $selected_cron_sync_interval = filter_input(INPUT_POST, 'selected_cron_sync_interval', FILTER_UNSAFE_RAW);
         $max_post_sync_selected = filter_input(INPUT_POST, 'max_post_sync_selected', FILTER_VALIDATE_INT);
-
+        $minimum_requirement = filter_input(INPUT_POST, 'minimum_requirement', FILTER_UNSAFE_RAW);
         $selected_cron_sync_interval ? $cron_sync_interval = $selected_cron_sync_interval : $cron_sync_interval = 'twicedaily';
         $max_post_sync_selected ? $max_sync_selected = $max_post_sync_selected : $max_sync_selected = 10;
+
+        $minimum_requirement ? $minimum = $minimum_requirement : $minimum = 'manage_options';
 
         if(!$active){
             wp_clear_scheduled_hook('rss_import_sync');
@@ -223,13 +225,14 @@ class WP_RSS_Imports_Admin_Ajax
         $settings = get_option('wp_rss_importer_settings');
 
         if($settings['selected_cron_sync_interval'] != $cron_sync_interval) {
-            wp_clear_scheduled_hook('wp_rss_importer_settings');
+            wp_clear_scheduled_hook('rss_import_sync');
             apply_filters($this->basename.'/rss_run_schedule_task', false);
         }
 
         $settings['aktiv'] = $active;
         $settings['selected_cron_sync_interval'] = $cron_sync_interval;
         $settings['max_post_sync_selected'] = $max_sync_selected;
+        $settings['selected_user_role'] = $minimum;
         update_option('wp_rss_importer_settings', $settings);
         $this->responseJson->status = true;
         $this->responseJson->title = 'Cron Settings';
