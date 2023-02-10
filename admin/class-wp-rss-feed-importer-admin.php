@@ -116,7 +116,7 @@ class Wp_Rss_Feed_Importer_Admin {
 
 	public function wp_rss_imports_startseite(): void {
 		$settings = $this->get_cron_defaults();
-print_r(get_option('wp_rss_importer_settings'));
+
 		if (!get_option('wp_rss_importer_settings')) {
 			update_option('wp_rss_importer_settings', $settings['cron_settings']);
 		}
