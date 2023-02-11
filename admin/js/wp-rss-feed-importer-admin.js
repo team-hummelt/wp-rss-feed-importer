@@ -208,7 +208,6 @@ document.addEventListener("DOMContentLoaded", function () {
                                 'delete_posts': result,
                                 'id': id,
                             }
-                            //bi-arrow-repeat
                             spinner.addClass('spin bi-arrow-repeat');
                             xhr_admin_ajax_handle(formData, false, btn_action_callback)
                         }

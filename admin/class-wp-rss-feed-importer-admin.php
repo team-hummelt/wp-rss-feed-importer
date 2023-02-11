@@ -120,11 +120,14 @@ class Wp_Rss_Feed_Importer_Admin {
 		if (!get_option('wp_rss_importer_settings')) {
 			update_option('wp_rss_importer_settings', $settings['cron_settings']);
 		}
+
+        $helpExample = file_get_contents(WP_RSS_FEED_IMPORTER_PLUGIN_DIR . '/admin/partials/Templates/example-help.txt');
 		$data = [
 			's' => get_option('wp_rss_importer_settings'),
 			'select' => $settings,
 			'db' => WP_RSS_FEED_IMPORTER_DB_VERSION,
-			'version' => $this->version
+			'version' => $this->version,
+            'help_example' => ($helpExample)
 		];
 
 		try {

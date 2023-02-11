@@ -5,3 +5,6 @@
 /includes/vendor/twbs/bootstrap-icons/docs/
 /includes/Gutenberg/Sidebar/node_modules/
 /includes/Gutenberg/Sidebar/src/
+/includes/Gutenberg/RssBlock/node_modules/
+/includes/Gutenberg/RssBlock/package-lock.json
+/includes/Gutenberg/RssBlock/src/

@@ -4,10 +4,12 @@ class RSS_Importer_Rest_Endpoint
 {
 
     protected Wp_Rss_Feed_Importer $main;
+    protected string $basename;
 
-    public function __construct(Wp_Rss_Feed_Importer $main)
+    public function __construct(string $basename, Wp_Rss_Feed_Importer $main)
     {
         $this->main = $main;
+        $this->basename = $basename;
     }
 
     /**
@@ -60,13 +62,64 @@ class RSS_Importer_Rest_Endpoint
         if (!$method) {
             return new WP_Error(404, ' Method failed');
         }
-        $tempArr = [];
         $response = new stdClass();
         switch ($method) {
-            case 'test':
+            case 'get-data':
+                $importsArr = [];
+                $args = 'WHERE r.active=1';
+                $imports = apply_filters($this->basename.'/get_rss_import', $args);
+                $def = [
+                    '0' => [
+                        'label' => __('select' .'...', 'wp-rss-feed-importer'),
+                        'value' => 0
+                    ]
+                ];
+                if(!$imports->status){
+                    $response->imports = $def;
+                } else {
+                    foreach ($imports->record as $tmp){
+                        $item = [
+                            'label' => $tmp->bezeichnung,
+                            'value' => $tmp->id
+                        ];
+                        $importsArr[] = $item;
+                    }
+                    if(!$importsArr){
+                        $importsArr = $def;
+                    }
+                    $importsArr = array_merge_recursive($def, $importsArr);
+                    $response->imports = $importsArr;
+                }
 
+                $selectContent = [
+                    '0' => [
+                        'label' => __('Content', 'wp-rss-feed-importer'),
+                        'value' => 'content'
+                    ],
+                    '1' => [
+                        'label' => __('Description', 'wp-rss-feed-importer'),
+                        'value' => 'description'
+                    ]
+                ];
+
+                $response->content = $selectContent;
+
+                $sortOut = [
+                    '0' => [
+                        'label' => __('Date descending', 'wp-rss-feed-importer'),
+                        'value' => 1
+                    ],
+                    '1' => [
+                        'label' => __('Date ascending', 'wp-rss-feed-importer'),
+                        'value' => 2
+                    ],
+                    '2' => [
+                        'label' => __('Menu Order', 'wp-rss-feed-importer'),
+                        'value' => 3
+                    ],
+                ];
+                $response->order = $sortOut;
                 break;
-
         }
         return new WP_REST_Response($response, 200);
     }

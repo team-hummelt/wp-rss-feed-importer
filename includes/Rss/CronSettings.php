@@ -235,21 +235,21 @@ trait CronSettings
 			__('Synchronization interval', 'wp-rss-feed-importer'),
 			__('Minimum requirement for plugin usage', 'wp-rss-feed-importer'),
 			__('Clock', 'wp-rss-feed-importer'),
-
+            __('The filter can be accessed from anywhere. All posts, attributes, metadata, term object as well as the import data are available.', 'wp-rss-feed-importer'),
+            __('RSS Import Gutenberg Block Callback Hook.', 'wp-rss-feed-importer'),
+            __('Help', 'wp-rss-feed-importer')
 		];
 	}
 
-	protected function js_language()
+	protected function js_language():array
 	{
-		$jsLang = [
-			'checkbox_delete_label' => __('Delete all imported posts?', 'wp-rss-feed-importer'),
-			'Cancel' => __('Cancel', 'wp-rss-feed-importer'),
-			'delete_title' => __('Really delete import?', 'wp-rss-feed-importer'),
-			'delete_subtitle' => __('The deletion cannot be undone.', 'wp-rss-feed-importer'),
-			'delete_btn_txt' => __('Delete import', 'wp-rss-feed-importer'),
-		];
-
-		return $jsLang;
+        return [
+            'checkbox_delete_label' => __('Delete all imported posts?', 'wp-rss-feed-importer'),
+            'Cancel' => __('Cancel', 'wp-rss-feed-importer'),
+            'delete_title' => __('Really delete import?', 'wp-rss-feed-importer'),
+            'delete_subtitle' => __('The deletion cannot be undone.', 'wp-rss-feed-importer'),
+            'delete_btn_txt' => __('Delete import', 'wp-rss-feed-importer'),
+        ];
 
 	}
 }

@@ -16,7 +16,7 @@
  * Plugin Name:       RSS Feed Importer
  * Plugin URI:        https://wwdh.de/plugins/wp-rss-feed-importer
  * Description:       RSS Feed Importer is a WordPress plugin for RSS (Really Simple Syndication) feeds. It collects content from various sources and displays the feeds on your WordPress website.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Jens Wiecker
  * Author URI:        https://wwdh.de
  * License:           GPL-2.0+
