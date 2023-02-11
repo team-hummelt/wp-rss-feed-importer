@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-02-11 12:26+0100\n"
-"PO-Revision-Date: 2023-02-11 12:28+0100\n"
+"POT-Creation-Date: 2023-02-11 15:21+0100\n"
+"PO-Revision-Date: 2023-02-11 15:22+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -133,25 +133,41 @@ msgstr "Das Plugin wurde deaktiviert."
 msgid "Contact the support."
 msgstr "Kontaktieren Sie den Support."
 
-#: includes/Gutenberg/RssBlock/build/index.js:2246
-#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:100
+#: includes/Gutenberg/RssBlock/build/index.js:1
+#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:106
 msgid "RSS Import select"
 msgstr "RSS Import auswählen"
 
-#: includes/Gutenberg/RssBlock/build/index.js:2253
-#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:108
+#: includes/Gutenberg/RssBlock/build/index.js:1
+#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:114
 msgid "Sort output"
 msgstr "Ausgabe sortieren"
 
-#: includes/Gutenberg/RssBlock/build/index.js:2259
-#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:116
+#: includes/Gutenberg/RssBlock/build/index.js:1
+#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:122
+msgid "Content output option"
+msgstr "Content Ausgabe Option"
+
+#: includes/Gutenberg/RssBlock/build/index.js:1
+#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:130
 msgid "Restrict output of imports"
 msgstr "Ausgabe der Importe einschränken"
 
-#: includes/Gutenberg/RssBlock/build/index.js:2262
-#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:119
+#: includes/Gutenberg/RssBlock/build/index.js:1
+#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:133
+#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:140
 msgid "0 = no limit"
 msgstr "0 = keine Begrenzung"
+
+#: includes/Gutenberg/RssBlock/build/index.js:1
+#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:137
+msgid "Output max. sign"
+msgstr "Ausgabe max. Zeichen"
+
+#: includes/Gutenberg/RssBlock/build/index.js:1
+#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:144
+msgid "Remove content HTML tags"
+msgstr "Content HTML-Tags entfernen"
 
 #: includes/Gutenberg/RssBlock/src/index.js:20
 msgid "RSS Importer"
@@ -159,22 +175,22 @@ msgstr "RSS Importer"
 
 #: includes/Gutenberg/RssBlock/src/index.js:25
 msgid " Design BY Jens Wiecker"
-msgstr ""
+msgstr " Design BY Jens Wiecker"
 
 #: includes/Gutenberg/RssBlock/src/index.js:26
 msgid "Design"
-msgstr ""
+msgstr "Design"
 
-#: includes/Gutenberg/RssBlock/src/index.js:96
+#: includes/Gutenberg/RssBlock/src/index.js:105
 msgid "RSS"
 msgstr "RSS"
 
-#: includes/Gutenberg/RssBlock/src/index.js:96
+#: includes/Gutenberg/RssBlock/src/index.js:105
 #: includes/Rss/CronSettings.php:192
 msgid "Import"
 msgstr "Importer"
 
-#: includes/Gutenberg/RssBlock/src/index.js:103
+#: includes/Gutenberg/RssBlock/src/index.js:112
 msgid "RSS Import"
 msgstr "RSS Import"
 
@@ -437,7 +453,7 @@ msgstr ""
 msgid "Save"
 msgstr "Speichern"
 
-#: includes/Rss/CronSettings.php:230 includes/Rss/CronSettings.php:249
+#: includes/Rss/CronSettings.php:230 includes/Rss/CronSettings.php:248
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -481,19 +497,19 @@ msgstr "RSS Import Gutenberg Block Callback Hook."
 msgid "Help"
 msgstr "Hilfe"
 
-#: includes/Rss/CronSettings.php:248
+#: includes/Rss/CronSettings.php:247
 msgid "Delete all imported posts?"
 msgstr "Alle Importierten Beiträge löschen?"
 
-#: includes/Rss/CronSettings.php:250
+#: includes/Rss/CronSettings.php:249
 msgid "Really delete import?"
 msgstr "Import wirklich löschen?"
 
-#: includes/Rss/CronSettings.php:251
+#: includes/Rss/CronSettings.php:250
 msgid "The deletion cannot be undone."
 msgstr "Das Löschen kann nicht rückgängig gemacht."
 
-#: includes/Rss/CronSettings.php:252
+#: includes/Rss/CronSettings.php:251
 msgid "Delete import"
 msgstr "Import löschen"
 
@@ -609,9 +625,3 @@ msgstr "Unbekannter Update-Checker-Status \"%s\""
 #: includes/vendor/yahnis-elsts/plugin-update-checker/Puc/v4p13/Vcs/PluginUpdateChecker.php:100
 msgid "There is no changelog available."
 msgstr "Es ist kein Change Log verfügbar."
-
-#~ msgid "Content output option"
-#~ msgstr "Content Ausgabe Option"
-
-#~ msgid "Description max. signs"
-#~ msgstr "Description max. Zeichen"
