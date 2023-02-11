@@ -2,7 +2,7 @@ function my_callback_function($posts, $attributes, $meta, $term, $import)
 {
 
       ob_start();
-
+        global $posts;
         //my output
 
       return ob_get_clean();

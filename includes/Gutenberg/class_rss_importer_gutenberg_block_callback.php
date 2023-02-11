@@ -5,16 +5,25 @@ class RSS_Importer_Gutenberg_Block_Callback
     public static function callback_rss_importer_block_type($attributes)
     {
 
-       // ob_start();
         isset($attributes['className']) && $attributes['className'] ? $className = 'class="' . $attributes['className'] . '"' : $className = '';
         isset($attributes['selectedBeitragType']) && $attributes['selectedBeitragType'] ? $selectedBeitragType = $attributes['selectedBeitragType'] : $selectedBeitragType = '';
         isset($attributes['selectedContent']) && $attributes['selectedContent'] ? $selectedContent = $attributes['selectedContent'] : $selectedContent = 'content';
         isset($attributes['descriptionLimit']) && $attributes['descriptionLimit'] ? $descriptionLimit = $attributes['descriptionLimit'] : $descriptionLimit = 0;
         isset($attributes['maxOutput']) && $attributes['maxOutput'] ? $maxOutput = $attributes['maxOutput'] : $maxOutput = 0;
         isset($attributes['selectedOrder']) && $attributes['selectedOrder'] ? $selectedOrder = $attributes['selectedOrder'] : $selectedOrder = 1;
+        isset($attributes['contentStripTags']) && $attributes['contentStripTags'] ? $contentStripTags = $attributes['contentStripTags'] : $contentStripTags = 1;
 
+        $attr = [
+            'className' => $className,
+            'selectedBeitragType' => $selectedBeitragType,
+            'selectedContent' => $selectedContent,
+            'descriptionLimit' => $descriptionLimit,
+            'maxOutput' => $maxOutput,
+            'selectedOrder' => $selectedOrder,
+            'contentStripTags' => $contentStripTags
+        ];
 
-        $posts = [];
+        global $posts;
         $term = [];
         $feedImport = [];
         $metaArr = [];
@@ -69,7 +78,7 @@ class RSS_Importer_Gutenberg_Block_Callback
            }
         }
 
-        return apply_filters('gutenberg_block_rss_importer_callback', $posts, $attributes, $metaArr, $term, $feedImport);
+        return apply_filters('gutenberg_block_rss_importer_callback', $posts, $attr, $metaArr, $term, $feedImport);
     }
 
     public function gutenberg_block_rss_importer_filter() {
