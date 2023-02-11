@@ -1,0 +1,11 @@
+function my_callback_function($posts, $attributes, $meta, $term, $import)
+{
+
+      ob_start();
+
+        //my output
+
+      return ob_get_clean();
+}
+
+add_filter('gutenberg_block_rss_importer_callback', 'my_callback_function', 10, 5);

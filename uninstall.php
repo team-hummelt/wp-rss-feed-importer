@@ -34,6 +34,8 @@ delete_option('wp-rss-feed-importer_update_config');
 delete_option('jal_wp_rss_importer_db_version');
 delete_option('wp_rss_importer_settings');
 
+wp_clear_scheduled_hook('rss_import_sync');
+
 global $wpdb;
 $table_name = $wpdb->prefix . 'rss_feed_importer';
 $sql = "DROP TABLE IF EXISTS $table_name";

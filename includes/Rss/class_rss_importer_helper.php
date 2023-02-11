@@ -1,6 +1,7 @@
 <?php
 namespace WPRSSFeddImporter\FeedImporter;
 
+use stdClass;
 use Wp_Rss_Feed_Importer;
 use WP_Term_Query;
 
@@ -178,6 +179,27 @@ class RSS_Importer_Helper
 			'generator' => htmlspecialchars($rss['channel']['generator'])
 		];
 	}
+
+    public function get_rss_import_post_meta($postId, $type = null):object
+    {
+        $return = new stdClass();
+        $return->status = false;
+        if(!$postId){
+            return $return;
+        }
+        $return->_rss_import_pubDate = get_post_meta($postId, '_rss_import_pubDate', true);
+        $return->_rss_import_guid = get_post_meta($postId, '_rss_import_guid', true);
+        $return->_rss_import_title = get_post_meta($postId, '_rss_import_title', true);
+        $return->_rss_import_link = get_post_meta($postId, '_rss_import_link', true);
+        $return->_rss_import_category = get_post_meta($postId, '_rss_import_category', true);
+        $return->_rss_import_id = get_post_meta($postId, '_rss_import_id', true);
+        $return->_rss_import_bezeichnung = get_post_meta($postId, '_rss_import_bezeichnung', true);
+        $return->status = true;
+        if($type){
+            return $return->$type;
+        }
+        return $return;
+    }
 
 
 	public function object2array_recursive($object)

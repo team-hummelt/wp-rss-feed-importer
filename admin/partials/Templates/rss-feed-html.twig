@@ -18,21 +18,29 @@
                             {{ 'RSS-Feed Import'|__ }}
                         </div>
                         <div class="card-body" style="min-height: 55vh">
-                            <button data-type="overview" data-target="#colImportOverview" data-parent="#collParent"
-                                    class="btn-toggle btn btn-blue-outline my-1" disabled>
-                                <i class="bi bi-rss me-1"></i>
-                                {{ 'Overview'|__ }}
-                            </button>
-                            <button data-type="import_handle" data-target="#colAddImport" data-parent="#collParent"
-                                    class="btn-toggle btn btn-blue-outline my-1">
-                                <i class="bi bi-rss-fill me-1"></i>
-                                {{ 'Add import'|__ }}
-                            </button>
-                            <button data-type="import_settings" data-target="#colImportSettings"
-                                    data-parent="#collParent" class="btn-toggle btn btn-blue-outline my-1">
-                                <i class="bi bi-gear me-1"></i>
-                                {{ 'Settings'|__ }}
-                            </button>
+                            <div class="d-flex flex-wrap">
+                                <button data-type="overview" data-target="#colImportOverview" data-parent="#collParent"
+                                        class="btn-toggle btn btn-blue-outline my-1 me-1" disabled>
+                                    <i class="bi bi-rss me-1"></i>
+                                    {{ 'Overview'|__ }}
+                                </button>
+                                <button data-type="import_handle" data-target="#colAddImport" data-parent="#collParent"
+                                        class="btn-toggle btn btn-blue-outline my-1 me-1">
+                                    <i class="bi bi-rss-fill me-1"></i>
+                                    {{ 'Add import'|__ }}
+                                </button>
+                                <button data-type="import_settings" data-target="#colImportSettings"
+                                        data-parent="#collParent" class="btn-toggle btn btn-blue-outline my-1 me-1">
+                                    <i class="bi bi-gear me-1"></i>
+                                    {{ 'Settings'|__ }}
+                                </button>
+                                <button data-type="import_help" data-target="#colImportHelp"
+                                        data-parent="#collParent"
+                                        class="btn-toggle btn btn-blue-outline ms-lg-auto my-1 me-1">
+                                    <i class="fa fa-life-ring me-1"></i>
+                                    {{ 'Help'|__ }}
+                                </button>
+                            </div>
                             <div id="collParent">
                                 <div id="colImportOverview" data-bs-parent="#collParent" class="collapse show">
                                     <hr>
@@ -41,13 +49,15 @@
                                                class="table table-bordered table-striped w-100 nowrap-0">
                                             <thead>
                                             <tr class="bg-body-tertiary">
-                                                <th class="fw-normal text-nowrap" scope="col">{{ 'Import title'|__ }}</th>
+                                                <th class="fw-normal text-nowrap"
+                                                    scope="col">{{ 'Import title'|__ }}</th>
                                                 <th class="fw-normal text-nowrap" scope="col">{{ 'Post Type'|__ }}</th>
                                                 <th class="fw-normal" scope="col">{{ 'Category'|__ }}</th>
                                                 <th class="fw-normal" scope="col">{{ 'Imported'|__ }}</th>
                                                 <th class="fw-normal" scope="col">{{ 'Last'|__ }}</th>
                                                 <th class="fw-normal" scope="col">{{ 'Next'|__ }}</th>
-                                                <th class="fw-normal text-nowrap" scope="col">{{ 'Import Status'|__ }}</th>
+                                                <th class="fw-normal text-nowrap"
+                                                    scope="col">{{ 'Import Status'|__ }}</th>
                                                 <th class="fw-normal" scope="col">{{ 'Active'|__ }}</th>
                                                 <th class="fw-normal text-nowrap" scope="col">{{ 'Import'|__ }}</th>
                                                 <th class="fw-normal text-nowrap" scope="col">{{ 'Edit'|__ }}</th>
@@ -56,13 +66,15 @@
                                             </thead>
                                             <tfoot>
                                             <tr class="bg-body-tertiary">
-                                                <th class="fw-normal text-nowrap" scope="col">{{ 'Import title'|__ }}</th>
+                                                <th class="fw-normal text-nowrap"
+                                                    scope="col">{{ 'Import title'|__ }}</th>
                                                 <th class="fw-normal text-nowrap" scope="col">{{ 'Post Type'|__ }}</th>
                                                 <th class="fw-normal" scope="col">{{ 'Category'|__ }}</th>
                                                 <th class="fw-normal" scope="col">{{ 'Imported'|__ }}</th>
                                                 <th class="fw-normal" scope="col">{{ 'Last'|__ }}</th>
                                                 <th class="fw-normal" scope="col">{{ 'Next'|__ }}</th>
-                                                <th class="fw-normal text-nowrap" scope="col">{{ 'Import Status'|__ }}</th>
+                                                <th class="fw-normal text-nowrap"
+                                                    scope="col">{{ 'Import Status'|__ }}</th>
                                                 <th class="fw-normal" scope="col">{{ 'Active'|__ }}</th>
                                                 <th class="fw-normal text-nowrap" scope="col">{{ 'Import'|__ }}</th>
                                                 <th class="fw-normal text-nowrap" scope="col">{{ 'Edit'|__ }}</th>
@@ -75,6 +87,20 @@
                                 <div id="colAddImport" data-bs-parent="#collParent" class="collapse"></div>
                                 <div id="colEditImport" data-bs-parent="#collParent" class="collapse"></div>
                                 <div id="colImportSettings" data-bs-parent="#collParent" class="collapse"></div>
+                                <div id="colImportHelp" data-bs-parent="#collParent" class="collapse">
+                                    <hr>
+                                    <div class="card-body border rounded">
+                                        <h5 class="fw-normal mb-3">
+                                            {{ 'RSS Import Gutenberg Block Callback Hook.'|__ }}
+                                        </h5>
+                                            <pre class="bg-light p-3">
+                                              {{ help_example|nl2br }}
+                                            </pre>
+                                        <p class="fs-6 fw-normal">
+                                            {{ 'The filter can be accessed from anywhere. All posts, attributes, metadata, term object as well as the import data are available.'|__ }}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

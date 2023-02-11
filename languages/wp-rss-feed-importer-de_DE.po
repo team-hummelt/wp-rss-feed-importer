@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-02-10 13:15+0100\n"
-"PO-Revision-Date: 2023-02-10 13:15+0100\n"
+"POT-Creation-Date: 2023-02-11 12:26+0100\n"
+"PO-Revision-Date: 2023-02-11 12:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -16,89 +16,92 @@ msgstr ""
 "esc_attr_e\n"
 "X-Poedit-SearchPath-0: admin\n"
 "X-Poedit-SearchPath-1: includes\n"
+"X-Poedit-SearchPath-2: includes/Gutenberg/RssBlock/build\n"
+"X-Poedit-SearchPathExcluded-0: includes/Gutenberg/RssBlock/node_modules\n"
+"X-Poedit-SearchPathExcluded-1: includes/Gutenberg/Sidebar\n"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:263
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:380
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:270
 #: admin/Ajax/class_wp_rss_imports_admin_ajax.php:387
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:408
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:416
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:394
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:415
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:423
 msgid "Ajax transmission error"
 msgstr "Ajax Übertragungsfehler"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:267
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:274
 msgid "Invalid designation"
 msgstr "Ungültige Bezeichnung"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:394
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:401
 msgid "Import failed"
 msgstr "Import fehlgeschlagen"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:398
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:405
 #: includes/Rss/CronSettings.php:187
 msgid "Imported"
 msgstr "Importiert"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:399
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:406
 msgid "Contributions were created successfully."
 msgstr "Beiträge wurden erfolgreich erstellt."
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:405
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:412
 msgid "Error"
 msgstr "Fehler"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:446
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:453
 msgid "Executed"
 msgstr "Ausgeführt"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:447
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:454
 msgid "The RSS import was successfully deleted."
 msgstr "Der RSS Import wurde erfolgreich gelöscht."
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:508
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:515
 msgid "Yes"
 msgstr "Ja"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:510
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:517
 msgid "No"
 msgstr "Nein"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:513
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:520
 msgid "Successful"
 msgstr "erfolgreich"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:515
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:522
 msgid "Failed"
 msgstr "fehlgeschlagen"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:517
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:526
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:524
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:533
 #: includes/Rss/CronSettings.php:237
 msgid "Clock"
 msgstr "Uhr"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:517
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:524
 msgid "unknown"
 msgstr "unbekannt"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:520
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:527
 msgid "Post"
 msgstr "Beitrag"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:520
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:527
 msgid "Posts"
 msgstr "Beiträge"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:529
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:536
 msgid "Import now"
 msgstr "jetzt Importieren"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:530
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:537
 #: includes/Rss/CronSettings.php:193
 #: includes/class-wp-rss-feed-importer-activator.php:142
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:531
+#: admin/Ajax/class_wp_rss_imports_admin_ajax.php:538
 #: includes/Rss/CronSettings.php:194
 msgid "Delete"
 msgstr "Löschen"
@@ -129,6 +132,75 @@ msgstr "Das Plugin wurde deaktiviert."
 #: admin/srv-api/config/class_make_remote_exec.php:202
 msgid "Contact the support."
 msgstr "Kontaktieren Sie den Support."
+
+#: includes/Gutenberg/RssBlock/build/index.js:2246
+#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:100
+msgid "RSS Import select"
+msgstr "RSS Import auswählen"
+
+#: includes/Gutenberg/RssBlock/build/index.js:2253
+#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:108
+msgid "Sort output"
+msgstr "Ausgabe sortieren"
+
+#: includes/Gutenberg/RssBlock/build/index.js:2259
+#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:116
+msgid "Restrict output of imports"
+msgstr "Ausgabe der Importe einschränken"
+
+#: includes/Gutenberg/RssBlock/build/index.js:2262
+#: includes/Gutenberg/RssBlock/src/components/_endpoint_data.js:119
+msgid "0 = no limit"
+msgstr "0 = keine Begrenzung"
+
+#: includes/Gutenberg/RssBlock/src/index.js:20
+msgid "RSS Importer"
+msgstr "RSS Importer"
+
+#: includes/Gutenberg/RssBlock/src/index.js:25
+msgid " Design BY Jens Wiecker"
+msgstr ""
+
+#: includes/Gutenberg/RssBlock/src/index.js:26
+msgid "Design"
+msgstr ""
+
+#: includes/Gutenberg/RssBlock/src/index.js:96
+msgid "RSS"
+msgstr "RSS"
+
+#: includes/Gutenberg/RssBlock/src/index.js:96
+#: includes/Rss/CronSettings.php:192
+msgid "Import"
+msgstr "Importer"
+
+#: includes/Gutenberg/RssBlock/src/index.js:103
+msgid "RSS Import"
+msgstr "RSS Import"
+
+#: includes/Gutenberg/class_rss_importer_rest_endpoint.php:73
+msgid "select..."
+msgstr "auswählen..."
+
+#: includes/Gutenberg/class_rss_importer_rest_endpoint.php:96
+msgid "Content"
+msgstr "Content"
+
+#: includes/Gutenberg/class_rss_importer_rest_endpoint.php:100
+msgid "Description"
+msgstr "Description"
+
+#: includes/Gutenberg/class_rss_importer_rest_endpoint.php:109
+msgid "Date descending"
+msgstr "Datum absteigend"
+
+#: includes/Gutenberg/class_rss_importer_rest_endpoint.php:113
+msgid "Date ascending"
+msgstr "Datum aufsteigend"
+
+#: includes/Gutenberg/class_rss_importer_rest_endpoint.php:117
+msgid "Menu Order"
+msgstr "Menu Order"
 
 #: includes/Rss/CronSettings.php:49
 msgid "Hourly"
@@ -221,10 +293,6 @@ msgstr "Import Status"
 #: includes/Rss/CronSettings.php:191
 msgid "Active"
 msgstr "Aktiv"
-
-#: includes/Rss/CronSettings.php:192
-msgid "Import"
-msgstr "Importieren"
 
 #: includes/Rss/CronSettings.php:196
 msgid "Settings"
@@ -369,7 +437,7 @@ msgstr ""
 msgid "Save"
 msgstr "Speichern"
 
-#: includes/Rss/CronSettings.php:230 includes/Rss/CronSettings.php:246
+#: includes/Rss/CronSettings.php:230 includes/Rss/CronSettings.php:249
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -397,19 +465,35 @@ msgstr "Synchronisierungsintervall"
 msgid "Minimum requirement for plugin usage"
 msgstr "Mindestvoraussetzung für die Verwendung dieses Plugins"
 
-#: includes/Rss/CronSettings.php:245
+#: includes/Rss/CronSettings.php:238
+msgid ""
+"The filter can be accessed from anywhere. All posts, attributes, metadata, "
+"term object as well as the import data are available."
+msgstr ""
+"Der Filter kann von überall aus aufgerufen werden. Alle Posts, Attribute, "
+"Metadaten, Term-Objekt sowie die Importdaten sind verfügbar."
+
+#: includes/Rss/CronSettings.php:239
+msgid "RSS Import Gutenberg Block Callback Hook."
+msgstr "RSS Import Gutenberg Block Callback Hook."
+
+#: includes/Rss/CronSettings.php:240
+msgid "Help"
+msgstr "Hilfe"
+
+#: includes/Rss/CronSettings.php:248
 msgid "Delete all imported posts?"
 msgstr "Alle Importierten Beiträge löschen?"
 
-#: includes/Rss/CronSettings.php:247
+#: includes/Rss/CronSettings.php:250
 msgid "Really delete import?"
 msgstr "Import wirklich löschen?"
 
-#: includes/Rss/CronSettings.php:248
+#: includes/Rss/CronSettings.php:251
 msgid "The deletion cannot be undone."
 msgstr "Das Löschen kann nicht rückgängig gemacht."
 
-#: includes/Rss/CronSettings.php:249
+#: includes/Rss/CronSettings.php:252
 msgid "Delete import"
 msgstr "Import löschen"
 
@@ -493,7 +577,7 @@ msgstr "Allgemein"
 msgid "general"
 msgstr "allgemein"
 
-#: includes/class-wp-rss-feed-importer.php:360
+#: includes/class-wp-rss-feed-importer.php:382
 #, php-format
 msgid ""
 "This plugin has been disabled because it requires a PHP version greater than "
@@ -525,3 +609,9 @@ msgstr "Unbekannter Update-Checker-Status \"%s\""
 #: includes/vendor/yahnis-elsts/plugin-update-checker/Puc/v4p13/Vcs/PluginUpdateChecker.php:100
 msgid "There is no changelog available."
 msgstr "Es ist kein Change Log verfügbar."
+
+#~ msgid "Content output option"
+#~ msgstr "Content Ausgabe Option"
+
+#~ msgid "Description max. signs"
+#~ msgstr "Description max. Zeichen"

@@ -258,7 +258,14 @@ class Wp_Rss_Feed_Importer {
 		 */
 		require_once plugin_dir_path(dirname(__FILE__ ) ) . 'includes/class-wp-rss-feed-importer-activator.php';
 
-		/**
+        /**
+         * Plugin WP Gutenberg Block Callback
+         * core plugin.
+         */
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/Gutenberg/class_rss_importer_gutenberg_block_callback.php';
+
+
+        /**
 		 * The Settings Trait
 		 * core plugin.
 		 */
@@ -294,6 +301,8 @@ class Wp_Rss_Feed_Importer {
 		 * core plugin.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/Rss/class_import_rss_cronjob.php';
+
+
 
 		/**
 		 * Plugin WP Gutenberg Sidebar
@@ -409,13 +418,15 @@ class Wp_Rss_Feed_Importer {
 		$this->loader->add_action('wp_ajax_nopriv_RssImporter', $plugin_admin, 'admin_ajax_RssImporter');
 		$this->loader->add_action('wp_ajax_RssImporter', $plugin_admin, 'admin_ajax_RssImporter');
 
-		$registerEndpoint = new RSS_Importer_Rest_Endpoint($this->main);
+        $registerEndpoint = new RSS_Importer_Rest_Endpoint($this->plugin_name, $this->main);
 		$this->loader->add_action('rest_api_init', $registerEndpoint, 'register_rss_importer_routes');
 
         //JOB UPDATE CHECKER
         $this->loader->add_action('init', $plugin_admin, 'rss_importer_update_checker');
         $this->loader->add_action('in_plugin_update_message-' . WP_RSS_FEED_IMPORTER_SLUG_PATH . '/' . WP_RSS_FEED_IMPORTER_SLUG_PATH . '.php', $plugin_admin, 'rss_importer_show_upgrade_notification', 10, 2);
 
+        global $registerThemeCallback;
+        $registerThemeCallback = new RSS_Importer_Gutenberg_Block_Callback();
 	}
 
 	/**
@@ -487,7 +498,7 @@ class Wp_Rss_Feed_Importer {
 		$this->loader->add_filter($this->plugin_name . '/get_import_taxonomy', $rss_importer_helper, 'fn_get_import_taxonomy',10,2);
 		$this->loader->add_filter($this->plugin_name . '/get_rss_channel', $rss_importer_helper, 'fn_get_rss_channel');
 
-		$this->loader->add_filter($this->plugin_name . '/get_rss_post_meta', $rss_importer_helper, 'fn_get_rss_post_meta', 10,2);
+		$this->loader->add_filter($this->plugin_name . '/get_rss_post_meta', $rss_importer_helper, 'get_rss_import_post_meta', 10,2);
 	}
 	/**
 	 * Register RSS Gutenberg Tools
@@ -497,10 +508,12 @@ class Wp_Rss_Feed_Importer {
 	 * @access   private
 	 */
 	private function register_wp_rss_importer_gutenberg_tools() {
-		$gbTools = new Register_RSS_Importer_Gutenberg_Tools($this->main);
-		/*$this->loader->add_action('init', $gbTools, 'fn_rss_posts_meta_fields');
+		$gbTools = new Register_RSS_Importer_Gutenberg_Tools($this->version, $this->plugin_name, $this->main);
+        $this->loader->add_action('init', $gbTools, 'register_rss_importer_block_type');
+        $this->loader->add_action('enqueue_block_editor_assets', $gbTools, 'rss_importer_block_type_scripts');
+        //$this->loader->add_action('init', $gbTools, 'rss_importer_sidebar_script_enqueue');
+        /*$this->loader->add_action('init', $gbTools, 'fn_rss_posts_meta_fields');
 		$this->loader->add_action('init', $gbTools, 'rss_importer_gutenberg_register_sidebar');
-		$this->loader->add_action('enqueue_block_editor_assets', $gbTools, 'rss_importer_sidebar_script_enqueue');
 		*/
 	}
 
@@ -605,5 +618,4 @@ class Wp_Rss_Feed_Importer {
 			return true;
 		}
 	}
-
 }
